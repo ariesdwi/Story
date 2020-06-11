@@ -20,6 +20,7 @@
 		6C64BFC024925C48008B403E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFBF24925C48008B403E /* ProfileViewController.swift */; };
 		6C64BFC224925C61008B403E /* LeaderboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFC124925C61008B403E /* LeaderboardsViewController.swift */; };
 		6C64BFC424925C70008B403E /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFC324925C70008B403E /* TopicViewController.swift */; };
+		6C64BFCC2492C21F008B403E /* topicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFCB2492C21F008B403E /* topicCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		6C64BFBF24925C48008B403E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6C64BFC124925C61008B403E /* LeaderboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardsViewController.swift; sourceTree = "<group>"; };
 		6C64BFC324925C70008B403E /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		6C64BFCB2492C21F008B403E /* topicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topicCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				6C64BFC324925C70008B403E /* TopicViewController.swift */,
+				6C64BFCB2492C21F008B403E /* topicCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				6C64BF8B2491F33B008B403E /* AppDelegate.swift in Sources */,
 				6C64BFC224925C61008B403E /* LeaderboardsViewController.swift in Sources */,
 				6C64BF8D2491F33B008B403E /* SceneDelegate.swift in Sources */,
+				6C64BFCC2492C21F008B403E /* topicCollectionViewCell.swift in Sources */,
 				6C64BFC424925C70008B403E /* TopicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
