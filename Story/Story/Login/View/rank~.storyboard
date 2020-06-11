@@ -33,8 +33,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="khD-uR-Pgf" kind="relationship" relationship="viewControllers" id="hBJ-r6-jRG"/>
+                        <segue destination="kX9-gh-uWc" kind="relationship" relationship="viewControllers" id="6AD-xy-NHS"/>
                         <segue destination="15L-6I-Uar" kind="relationship" relationship="viewControllers" id="SBb-La-4Ub"/>
-                        <segue destination="FVD-w1-c4j" kind="relationship" relationship="viewControllers" id="GIf-3G-3xB"/>
+                        <segue destination="0d7-f2-IVl" kind="relationship" relationship="viewControllers" id="GIf-3G-3xB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KiX-o6-nIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -51,6 +52,45 @@
             </objects>
             <point key="canvasLocation" x="-1896" y="-198"/>
         </scene>
+        <!--LeaderboardView-->
+        <scene sceneID="V0j-mR-Gk7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LeaderboardView" id="kX9-gh-uWc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="J5Y-Zm-0N1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ed-1m-l9P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1172" y="-198"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="OQ0-oH-WHO">
+            <objects>
+                <tableViewController id="0d7-f2-IVl" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ag7-AV-qsO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wA5-I4-g8u">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wA5-I4-g8u" id="RiY-PG-6Ge">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0d7-f2-IVl" id="ijW-Tg-dJN"/>
+                            <outlet property="delegate" destination="0d7-f2-IVl" id="9qt-C2-xJb"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="Nur-s9-6cG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNB-0E-pKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="-768"/>
+        </scene>
         <!--ProfileView-->
         <scene sceneID="Jkk-jM-Fuh">
             <objects>
@@ -60,16 +100,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sB-at-DZu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-372" y="-198"/>
-        </scene>
-        <!--rank-->
-        <scene sceneID="L7l-2f-9Yo">
-            <objects>
-                <viewControllerPlaceholder storyboardName="rank" id="FVD-w1-c4j" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1em-ph-zRY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eeu-GO-E72" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-132" y="-768"/>
         </scene>
     </scenes>
 </document>

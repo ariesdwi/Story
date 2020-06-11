@@ -15,12 +15,12 @@
 		6C64BFB424925831008B403E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFB324925831008B403E /* LoginViewController.swift */; };
 		6C64BFB824925A51008B403E /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFB724925A51008B403E /* LoginView.storyboard */; };
 		6C64BFBA24925BD6008B403E /* TopicView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFB924925BD6008B403E /* TopicView.storyboard */; };
-		6C64BFBC24925BF8008B403E /* LeaderboardView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFBB24925BF8008B403E /* LeaderboardView.storyboard */; };
 		6C64BFBE24925C0D008B403E /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFBD24925C0D008B403E /* ProfileView.storyboard */; };
 		6C64BFC024925C48008B403E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFBF24925C48008B403E /* ProfileViewController.swift */; };
 		6C64BFC224925C61008B403E /* LeaderboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFC124925C61008B403E /* LeaderboardsViewController.swift */; };
 		6C64BFC424925C70008B403E /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFC324925C70008B403E /* TopicViewController.swift */; };
 		6C64BFCC2492C21F008B403E /* topicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFCB2492C21F008B403E /* topicCollectionViewCell.swift */; };
+		6C64BFCE2492CE32008B403E /* rank.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFCD2492CE32008B403E /* rank.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +34,12 @@
 		6C64BFB324925831008B403E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6C64BFB724925A51008B403E /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
 		6C64BFB924925BD6008B403E /* TopicView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopicView.storyboard; sourceTree = "<group>"; };
-		6C64BFBB24925BF8008B403E /* LeaderboardView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LeaderboardView.storyboard; path = ../Controller/LeaderboardView.storyboard; sourceTree = "<group>"; };
 		6C64BFBD24925C0D008B403E /* ProfileView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
 		6C64BFBF24925C48008B403E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6C64BFC124925C61008B403E /* LeaderboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardsViewController.swift; sourceTree = "<group>"; };
 		6C64BFC324925C70008B403E /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		6C64BFCB2492C21F008B403E /* topicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topicCollectionViewCell.swift; sourceTree = "<group>"; };
+		6C64BFCD2492CE32008B403E /* rank.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = rank.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +191,7 @@
 		6C64BFAB24925774008B403E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6C64BFBB24925BF8008B403E /* LeaderboardView.storyboard */,
+				6C64BFCD2492CE32008B403E /* rank.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,8 +295,8 @@
 			files = (
 				6C64BFBA24925BD6008B403E /* TopicView.storyboard in Resources */,
 				6C64BF972491F33D008B403E /* LaunchScreen.storyboard in Resources */,
+				6C64BFCE2492CE32008B403E /* rank.storyboard in Resources */,
 				6C64BF942491F33D008B403E /* Assets.xcassets in Resources */,
-				6C64BFBC24925BF8008B403E /* LeaderboardView.storyboard in Resources */,
 				6C64BFBE24925C0D008B403E /* ProfileView.storyboard in Resources */,
 				6C64BFB824925A51008B403E /* LoginView.storyboard in Resources */,
 			);
