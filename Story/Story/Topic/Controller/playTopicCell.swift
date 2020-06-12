@@ -10,5 +10,5 @@ import UIKit
 
 class playTopicCell: UICollectionViewCell {
     
-    @IBOutlet var lyricsLabel: UILabel!
+
 }
