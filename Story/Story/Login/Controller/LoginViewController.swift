@@ -10,21 +10,33 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var emailTextField: UITextField!
+    
+    @IBOutlet var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.navigationController?.isNavigationBarHidden = true
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func Login (_ sender:UIButton){
+        let email :String = emailTextField.text!
+        let pin :String = passwordTextField.text!
+        
+         
+         if email.isEmpty || pin.isEmpty {
+             print("is empty")
+         }
+         
+         if (email == "aries@gmail.com" && pin == "1234" ){
+             print("true")
+            
+             performSegue(withIdentifier: "AfterLogin", sender: self)
+             
+         }else{
+             print("false")
+         }
     }
-    */
-
 }
