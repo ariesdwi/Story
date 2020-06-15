@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yeO-Fu-FeP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,7 +48,7 @@
                                 <connections>
                                     <outlet property="imageView" destination="fb0-cn-1PJ" id="FhF-7I-h7y"/>
                                     <outlet property="nameLabel" destination="oK1-iS-YZu" id="788-AN-L8c"/>
-                                    <segue destination="MT9-bM-LOV" kind="show" id="Yty-1k-Cyh"/>
+                                    <segue destination="Aq0-T8-B6u" kind="show" id="kxH-Xi-7yZ"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -107,7 +107,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0F-cu-cht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260.8695652173915" y="-178.125"/>
+            <point key="canvasLocation" x="2699" y="-171"/>
         </scene>
         <!--Play Story Lyrics-->
         <scene sceneID="HMe-ls-d0J">
@@ -118,7 +118,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jqP-Jz-CM9">
-                                <rect key="frame" x="20" y="177" width="374" height="321"/>
+                                <rect key="frame" x="20" y="273" width="374" height="321"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="321" id="cn6-k0-VHt"/>
@@ -159,6 +159,11 @@
                                     <outlet property="delegate" destination="Aq0-T8-B6u" id="d59-go-Zp6"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGu-ou-RF4">
+                                <rect key="frame" x="184" y="749" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -175,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGX-YB-lHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943.4782608695655" y="-171.42857142857142"/>
+            <point key="canvasLocation" x="1028" y="-201"/>
         </scene>
         <!--Topic-->
         <scene sceneID="KmI-hm-YEo">
