@@ -28,6 +28,7 @@
 		6C64BFF32494A1B6008B403E /* rasis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFEF2494A1B6008B403E /* rasis.jpg */; };
 		6C64BFF42494A1B6008B403E /* nature.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFF02494A1B6008B403E /* nature.jpg */; };
 		6C64BFF62496AA04008B403E /* playStoryLyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFF52496AA04008B403E /* playStoryLyrics.swift */; };
+		FEF7902D24980D6B0014D970 /* speechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7902C24980D6B0014D970 /* speechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		6C64BFEF2494A1B6008B403E /* rasis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rasis.jpg; sourceTree = "<group>"; };
 		6C64BFF02494A1B6008B403E /* nature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nature.jpg; sourceTree = "<group>"; };
 		6C64BFF52496AA04008B403E /* playStoryLyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playStoryLyrics.swift; sourceTree = "<group>"; };
+		FEF7902C24980D6B0014D970 /* speechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 				6C64BFC324925C70008B403E /* TopicViewController.swift */,
 				6C64BFCB2492C21F008B403E /* topicCollectionViewCell.swift */,
 				6C64BFF52496AA04008B403E /* playStoryLyrics.swift */,
+				FEF7902C24980D6B0014D970 /* speechRecognizer.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				6C64BF8F2491F33B008B403E /* ViewController.swift in Sources */,
 				6C64BFC024925C48008B403E /* ProfileViewController.swift in Sources */,
 				6C64BFF62496AA04008B403E /* playStoryLyrics.swift in Sources */,
+				FEF7902D24980D6B0014D970 /* speechRecognizer.swift in Sources */,
 				6C64BF8B2491F33B008B403E /* AppDelegate.swift in Sources */,
 				6C64BFEC24941D70008B403E /* playTopicCell.swift in Sources */,
 				6C64BFC224925C61008B403E /* LeaderboardsViewController.swift in Sources */,
