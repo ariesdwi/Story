@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yeO-Fu-FeP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -138,7 +138,7 @@
                                     <constraint firstAttribute="height" constant="321" id="cn6-k0-VHt"/>
                                     <constraint firstAttribute="width" constant="374" id="t0o-WP-hcw"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eBQ-VR-FhM">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eBQ-VR-FhM">
                                     <size key="itemSize" width="374" height="321"/>
                                     <size key="estimatedItemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -190,6 +190,8 @@
                     <navigationItem key="navigationItem" id="fQB-ZY-I9a"/>
                     <connections>
                         <outlet property="Coll" destination="jqP-Jz-CM9" id="MMt-sP-WQ8"/>
+                        <outlet property="btnRecord" destination="RGu-ou-RF4" id="9cT-Ad-7fI"/>
+                        <outlet property="showTextLabel" destination="mbF-99-4h0" id="2na-qF-HeS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGX-YB-lHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
