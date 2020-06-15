@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import Speech
 
-class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
+class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
          
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -18,6 +18,8 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
     private var recognitionTask: SFSpeechRecognitionTask?
      
     private let audioEngine = AVAudioEngine()
+    
+    let layout = UICollectionViewFlowLayout()
       
     @IBOutlet var Coll: UICollectionView!
     @IBOutlet weak var showTextLabel: UILabel!
@@ -36,6 +38,10 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
         self.currentArr = self.aryData[self.currentArrCount].split(separator:" ")
         print(self.currentArr)
         super.viewDidLoad()
+        
+        layout.scrollDirection = .vertical
+        
+        
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -235,6 +241,26 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
         }, completion: nil)
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+            var widthLayout = view.frame.width-60
+            var heightLayout = CGFloat(120)
+                   
+    //        print(widthLayout)
+    //        if indexPath.row == a {
+    //            isiFloat = 200
+    //            heightLayout = CGFloat(isiFloat)
+    //        } else {
+    //
+    //        }
+
+            return CGSize(width: widthLayout, height: heightLayout)
+        }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+           return 10
+       }
 
 
 }
