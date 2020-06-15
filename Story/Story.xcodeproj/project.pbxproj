@@ -21,6 +21,13 @@
 		6C64BFC424925C70008B403E /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFC324925C70008B403E /* TopicViewController.swift */; };
 		6C64BFCC2492C21F008B403E /* topicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFCB2492C21F008B403E /* topicCollectionViewCell.swift */; };
 		6C64BFCE2492CE32008B403E /* rank.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFCD2492CE32008B403E /* rank.storyboard */; };
+		6C64BFEB24941D70008B403E /* playTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFE924941D70008B403E /* playTopic.swift */; };
+		6C64BFEC24941D70008B403E /* playTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFEA24941D70008B403E /* playTopicCell.swift */; };
+		6C64BFF12494A1B6008B403E /* corona.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFED2494A1B5008B403E /* corona.jpg */; };
+		6C64BFF22494A1B6008B403E /* Sekolah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFEE2494A1B6008B403E /* Sekolah.jpg */; };
+		6C64BFF32494A1B6008B403E /* rasis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFEF2494A1B6008B403E /* rasis.jpg */; };
+		6C64BFF42494A1B6008B403E /* nature.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C64BFF02494A1B6008B403E /* nature.jpg */; };
+		6C64BFF62496AA04008B403E /* playStoryLyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C64BFF52496AA04008B403E /* playStoryLyrics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		6C64BFC324925C70008B403E /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		6C64BFCB2492C21F008B403E /* topicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topicCollectionViewCell.swift; sourceTree = "<group>"; };
 		6C64BFCD2492CE32008B403E /* rank.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = rank.storyboard; sourceTree = "<group>"; };
+		6C64BFE924941D70008B403E /* playTopic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playTopic.swift; sourceTree = "<group>"; };
+		6C64BFEA24941D70008B403E /* playTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playTopicCell.swift; sourceTree = "<group>"; };
+		6C64BFED2494A1B5008B403E /* corona.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = corona.jpg; sourceTree = "<group>"; };
+		6C64BFEE2494A1B6008B403E /* Sekolah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sekolah.jpg; sourceTree = "<group>"; };
+		6C64BFEF2494A1B6008B403E /* rasis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rasis.jpg; sourceTree = "<group>"; };
+		6C64BFF02494A1B6008B403E /* nature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nature.jpg; sourceTree = "<group>"; };
+		6C64BFF52496AA04008B403E /* playStoryLyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playStoryLyrics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +96,6 @@
 				6C64BF8A2491F33B008B403E /* AppDelegate.swift */,
 				6C64BF8E2491F33B008B403E /* ViewController.swift */,
 				6C64BF932491F33D008B403E /* Assets.xcassets */,
-				6C64BF952491F33D008B403E /* LaunchScreen.storyboard */,
 				6C64BF982491F33D008B403E /* Info.plist */,
 			);
 			path = Story;
@@ -145,6 +158,7 @@
 		6C64BFA524925738008B403E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6C64BF952491F33D008B403E /* LaunchScreen.storyboard */,
 				6C64BFB724925A51008B403E /* LoginView.storyboard */,
 			);
 			path = View;
@@ -222,8 +236,11 @@
 		6C64BFAF249257A5008B403E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6C64BFE924941D70008B403E /* playTopic.swift */,
+				6C64BFEA24941D70008B403E /* playTopicCell.swift */,
 				6C64BFC324925C70008B403E /* TopicViewController.swift */,
 				6C64BFCB2492C21F008B403E /* topicCollectionViewCell.swift */,
+				6C64BFF52496AA04008B403E /* playStoryLyrics.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +248,10 @@
 		6C64BFB0249257AD008B403E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6C64BFED2494A1B5008B403E /* corona.jpg */,
+				6C64BFF02494A1B6008B403E /* nature.jpg */,
+				6C64BFEF2494A1B6008B403E /* rasis.jpg */,
+				6C64BFEE2494A1B6008B403E /* Sekolah.jpg */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -293,8 +314,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C64BFF42494A1B6008B403E /* nature.jpg in Resources */,
 				6C64BFBA24925BD6008B403E /* TopicView.storyboard in Resources */,
+				6C64BFF32494A1B6008B403E /* rasis.jpg in Resources */,
+				6C64BFF22494A1B6008B403E /* Sekolah.jpg in Resources */,
 				6C64BF972491F33D008B403E /* LaunchScreen.storyboard in Resources */,
+				6C64BFF12494A1B6008B403E /* corona.jpg in Resources */,
 				6C64BFCE2492CE32008B403E /* rank.storyboard in Resources */,
 				6C64BF942491F33D008B403E /* Assets.xcassets in Resources */,
 				6C64BFBE24925C0D008B403E /* ProfileView.storyboard in Resources */,
@@ -310,9 +335,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C64BFB424925831008B403E /* LoginViewController.swift in Sources */,
+				6C64BFEB24941D70008B403E /* playTopic.swift in Sources */,
 				6C64BF8F2491F33B008B403E /* ViewController.swift in Sources */,
 				6C64BFC024925C48008B403E /* ProfileViewController.swift in Sources */,
+				6C64BFF62496AA04008B403E /* playStoryLyrics.swift in Sources */,
 				6C64BF8B2491F33B008B403E /* AppDelegate.swift in Sources */,
+				6C64BFEC24941D70008B403E /* playTopicCell.swift in Sources */,
 				6C64BFC224925C61008B403E /* LeaderboardsViewController.swift in Sources */,
 				6C64BF8D2491F33B008B403E /* SceneDelegate.swift in Sources */,
 				6C64BFCC2492C21F008B403E /* topicCollectionViewCell.swift in Sources */,

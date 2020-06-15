@@ -11,4 +11,7 @@ import UIKit
 class playTopicCell: UICollectionViewCell {
     
 
+    @IBOutlet var displayLabel: UILabel!
+    
+    
 }
