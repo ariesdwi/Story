@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import Speech
 
-class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
+class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, SFSpeechRecognizerDelegate {
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
          
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -18,14 +18,12 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
     private var recognitionTask: SFSpeechRecognitionTask?
      
     private let audioEngine = AVAudioEngine()
-    
-    let layout = UICollectionViewFlowLayout()
       
     @IBOutlet var Coll: UICollectionView!
     @IBOutlet weak var showTextLabel: UILabel!
     @IBOutlet weak var btnRecord: UIButton!
     
-    var aryData = ["You wake in the morning and roll out of bed","Making your way to the bathroom, you take a look in the mirror","Your reflection stares back at you. After you finish showering, you dry yourself and return to your bedroom","While you are getting dressed, something disturbs you", "You hear a strange noise coming from the bathroom. Glancing across the hallway, you can just make out a dark silhouette in the bathroom doorway", "You barge into the bathroom, but it is empty. The air is still heavy with condensation", "For a split second, you notice something in the corner of your vision", "A shadowy figure just slipped out the door", "You rub the fog off the mirror and stare into it, but there’s nothing staring back"]
+    var aryData = ["You wake in the morning and roll out of bed","Making your way to the bathroom you take a look in the mirror","Your reflection stares back at you","After you finish showering you dry yourself and return to your bedroom","While you are getting dressed something disturbs you", "You hear a strange noise coming from the bathroom. Glancing across the hallway, you can just make out a dark silhouette in the bathroom doorway", "You barge into the bathroom but it is empty. The air is still heavy with condensation", "For a split second, you notice something in the corner of your vision", "A shadowy figure just slipped out the door", "You rub the fog off the mirror and stare into it but there’s nothing staring back","","","","",""]
     
     var scrollingtimer = Timer()
     
@@ -37,11 +35,9 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
     override func viewDidLoad() {
         self.currentArr = self.aryData[self.currentArrCount].split(separator:" ")
         print(self.currentArr)
+        let attribute = NSMutableAttributedString.init(string: String(self.aryData[self.currentArrCount]))
+        self.showTextLabel.attributedText = NSMutableAttributedString.init(string: String(self.aryData[self.currentArrCount]))
         super.viewDidLoad()
-        
-        layout.scrollDirection = .vertical
-        
-        
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -70,6 +66,7 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
 //        }else {
 //            rowIndex = 0
 //        }
+        
         cell.displayLabel.text = self.aryData[rowIndex]
         
 //        scrollingtimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(playStoryLyrics.scrollToView(theTimer:)), userInfo: rowIndex, repeats: true)
@@ -109,7 +106,6 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
            }
            
            private func startRecording() throws {
-        
                // Cancel the previous task if it's running.
                if let recognitionTask = recognitionTask {
                    recognitionTask.cancel()
@@ -137,42 +133,39 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
                     var isFinal = false
                 
                 if let result = result {
-                    let lastArr = result.bestTranscription.formattedString.split(separator: " ").count - 1
-                    if(self.currentArr.count > 0){
+                    if(self.currentArr.count > 1){
+                        let lastArr = result.bestTranscription.formattedString.split(separator: " ").count - 1
                         let lastText = result.bestTranscription.segments[lastArr].substring
                         let lastTarget = self.currentArr[0]
-    //                    print(lastText)
-    //                    print(lastTarget)
     //                    print(lastText == lastTarget)
                         isFinal = result.isFinal
 
-                        if(lastText == lastTarget){
+//                        if(lastText.lowercased() == lastTarget.lowercased()){
                             self.currentText = self.currentText + " " + self.currentArr[0]
     //                        let range = (self.allText as NSString).range(of: self.currentText)
                             self.currentCount = self.currentText.count
-                            let range = NSMakeRange(0, self.currentCount-1)
+                            let range = NSMakeRange(0, self.currentCount - 1)
                            
-                            let attribute = NSMutableAttributedString.init(string: String(self.currentArr[self.currentArrCount]))
-                            attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red , range: range)
-                            print(attribute)
-                            print("masuk")
+                            let attribute = NSMutableAttributedString.init(string: String(self.aryData[self.currentArrCount]))
+                            attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue , range: range)
                             self.showTextLabel.attributedText = attribute
                             self.currentArr.remove(at: 0)
-                        }
+//                        }
                        }
-                    else if(self.currentArrCount == 0){
-                        self.currentCount = 0
+                    else if(self.currentArr.count <= 1){
+                        self.currentCount = 1
                         self.currentText = ""
                         self.currentArrCount += 1
                         self.currentArr = self.aryData[self.currentArrCount].split(separator:" ")
-                        let range = NSMakeRange(0, self.currentCount-1)
+                        let range = NSMakeRange(0, self.currentCount - 1)
                         
-                        let attribute = NSMutableAttributedString.init(string: String(self.currentArr[self.currentArrCount]))
+                        let attribute = NSMutableAttributedString.init(string: String(self.aryData[self.currentArrCount]))
                         attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red , range: range)
                         print(attribute)
                         print("render baru")
                         self.showTextLabel.attributedText = attribute
-//                        self.scrollToView()
+                        self.scrollToView()
+                        
                     }
                        else if error != nil || isFinal {
                            self.audioEngine.stop()
@@ -196,13 +189,6 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
                audioEngine.prepare()
                
                try audioEngine.start()
-            
-               let range = NSMakeRange(0, self.currentCount-1)
-               let attribute = NSMutableAttributedString.init(string: String(self.currentArr[self.currentArrCount]))
-               attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red , range: range)
-               print(attribute)
-               print("masuk")
-               self.showTextLabel.attributedText = attribute
            }
         
            // MARK: SFSpeechRecognizerDelegate
@@ -223,10 +209,14 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
         
         @IBAction func recordButtonTapped(_ sender: UIButton) {
                if audioEngine.isRunning {
+                    print("stop")
                    audioEngine.stop()
                    recognitionRequest?.endAudio()
-                   btnRecord.isEnabled = false
-                   btnRecord.setTitle("Stopping", for: .disabled)
+                   self.currentArrCount = 0
+                   self.currentCount = 0
+                   self.currentText = self.aryData[currentArrCount]
+                   btnRecord.isEnabled = true
+                   btnRecord.setTitle("Start Recording", for: [])
                } else {
                    try! startRecording()
                    btnRecord.setTitle("Stop recording", for: [])
@@ -234,14 +224,28 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
            }
     
     @objc func scrollToView(){
-           
-        UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations: {
-            
-            self.Coll.scrollToItem(at: IndexPath(row: self.currentArrCount, section: 0), at: .centeredHorizontally, animated: true)
-        }, completion: nil)
-        
+        if let colls = self.Coll {
+            for cell in colls.visibleCells{
+                let indexPath: IndexPath? = colls.indexPath(for: cell)
+                if (indexPath!.row == self.currentArrCount) {
+                    let indexPath1: IndexPath?
+                    
+                    indexPath1 = IndexPath.init(row:(indexPath?.row)! , section: 0 )
+
+                    colls.scrollToItem(at: indexPath1!, at: .top, animated: true)
+                }
+            }
+        }
+//        self.Coll.scrollRectToVisible(CGRect, animated: <#T##Bool#>)
+//        self.Coll.scrollToItem(at: IndexPath(row: 1, section: 0), at: .centeredHorizontally, animated: true)
+          
+//        UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations: {
+//
+//        }, completion: nil)
+//        self.Coll.setContentOffset(contentOffset: CGPoint,
+//        animated animated: true)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
             var widthLayout = view.frame.width-60
@@ -263,4 +267,20 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
        }
 
 
+}
+
+extension UICollectionView {
+    func scrollToNextItem() {
+        let contentOffset = CGFloat(floor(self.contentOffset.x + self.bounds.size.height))
+        self.moveToFrame(contentOffset: contentOffset)
+    }
+
+    func scrollToPreviousItem() {
+        let contentOffset = CGFloat(floor(self.contentOffset.x - self.bounds.size.height))
+        self.moveToFrame(contentOffset: contentOffset)
+    }
+
+    func moveToFrame(contentOffset : CGFloat) {
+        self.setContentOffset(CGPoint(x: contentOffset, y: self.contentOffset.y), animated: true)
+    }
 }
