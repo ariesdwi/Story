@@ -31,6 +31,7 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
     var currentCount = 0
     var currentArr:Array<Substring> = []
     var currentText = ""
+    var points = 0
     
     override func viewDidLoad() {
         self.currentArr = self.aryData[self.currentArrCount].split(separator:" ")
@@ -134,13 +135,17 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
                 
                 if let result = result {
                     if(self.currentArr.count > 1){
+                        //tambahin poin disini kalo lo mau per kata
                         let lastArr = result.bestTranscription.formattedString.split(separator: " ").count - 1
                         let lastText = result.bestTranscription.segments[lastArr].substring
                         let lastTarget = self.currentArr[0]
     //                    print(lastText == lastTarget)
                         isFinal = result.isFinal
+                
 
 //                        if(lastText.lowercased() == lastTarget.lowercased()){
+                        self.points += 5
+//                        self.lable = String(self.points)
                             self.currentText = self.currentText + " " + self.currentArr[0]
     //                        let range = (self.allText as NSString).range(of: self.currentText)
                             self.currentCount = self.currentText.count
@@ -153,6 +158,7 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
 //                        }
                        }
                     else if(self.currentArr.count <= 1){
+                        //tambahin poin disini kalo lo mau per item column
                         self.currentCount = 1
                         self.currentText = ""
                         self.currentArrCount += 1
