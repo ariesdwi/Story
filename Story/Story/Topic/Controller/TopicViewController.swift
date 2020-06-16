@@ -11,7 +11,7 @@ import UIKit
 class TopicViewController: UICollectionViewController {
 
     var imageTopik:[String] = ["corona.jpg","Sekolah.jpg","rasis.jpg"]
-    var namaTopic:[String] = ["Covid - 19 ","Study ","Rasis "]
+    var namaTopic:[String] = ["Mirror Escape ","Study ","Rasis "]
     
     override func viewDidLoad() {
         super.viewDidLoad()

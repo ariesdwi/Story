@@ -22,6 +22,7 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
     @IBOutlet var Coll: UICollectionView!
     @IBOutlet weak var showTextLabel: UILabel!
     @IBOutlet weak var btnRecord: UIButton!
+    @IBOutlet var pointsLabel: UILabel!
     
     var aryData = ["You wake in the morning and roll out of bed","Making your way to the bathroom you take a look in the mirror","Your reflection stares back at you","After you finish showering you dry yourself and return to your bedroom","While you are getting dressed something disturbs you", "You hear a strange noise coming from the bathroom. Glancing across the hallway, you can just make out a dark silhouette in the bathroom doorway", "You barge into the bathroom but it is empty. The air is still heavy with condensation", "For a split second, you notice something in the corner of your vision", "A shadowy figure just slipped out the door", "You rub the fog off the mirror and stare into it but there’s nothing staring back","","","","",""]
     
@@ -130,7 +131,8 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
                // A recognition task represents a speech recognition session.
                // We keep a reference to the task so that it can be cancelled.
             // track last word
-               recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
+               recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) {
+                result, error in
                     var isFinal = false
                 
                 if let result = result {
@@ -145,7 +147,7 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
 
 //                        if(lastText.lowercased() == lastTarget.lowercased()){
                         self.points += 5
-//                        self.lable = String(self.points)
+                        self.pointsLabel.text = String(self.points)
                             self.currentText = self.currentText + " " + self.currentArr[0]
     //                        let range = (self.allText as NSString).range(of: self.currentText)
                             self.currentCount = self.currentText.count
@@ -255,7 +257,7 @@ class playStoryLyrics: UIViewController, UICollectionViewDelegate,UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
             var widthLayout = view.frame.width-60
-            var heightLayout = CGFloat(120)
+            var heightLayout = CGFloat(80)
                    
     //        print(widthLayout)
     //        if indexPath.row == a {
